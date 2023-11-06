@@ -1,0 +1,69 @@
+/* Utilidades */
+.grid {
+  display: grid;
+}
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos específicos para la sección de ubicación*/
+
+/* Agrega más estilos CSS según tus preferencias */
+
+/* Mapas estilos */
+#map {
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  border: 3px solid #adabab8f;
+  margin: 0 auto;
+}
+
+.container__data {
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+#info-container {
+  padding: 20px;
+
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: -5px 5px 10px #adadad, 5px -5px 10px #ffffff;
+}
+#info-container p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 575px) {
+  .container__data {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+  }
+  #map {
+    width: 100%;
+    height: 100%;
+  }
+}

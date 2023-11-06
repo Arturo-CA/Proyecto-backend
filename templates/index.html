@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GPS Data Dashboard</title>
+    <!-- Incluye la hoja de estilo de Leaflet -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <img src="../static/resources/logo_upn.svg" width="350" height="150" />
+      <h1>Dashboard de Seguimiento de Ubicación</h1>
+    </header>
+    <main>
+      <section class="grid container__data">
+        <div id="map"></div>
+        <div id="info-container">
+          <h2>
+            <i class="fa-solid fa-globe"></i>
+            Datos:
+          </h2>
+          <p>Latitud: <span id="latitude">0.0000</span></p>
+          <p>Longitud: <span id="longitude">0.0000</span></p>
+          <p>Lugar: <span id="place-name"></span></p>
+          <p>Hora: <span id="datetime"></span></p>
+          <p>Distrito: <span id="distrito"></span></p>
+        </div>
+      </section>
+    </main>
+    <!-- Crea un contenedor para el mapa -->
+
+    <!-- Incluye la biblioteca de Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </body>
+</html>
